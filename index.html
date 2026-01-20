@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChemMaster - Platform Pembelajaran Kimia Interaktif</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-flask"></i>
+                <span>ChemMaster</span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#fitur">Fitur</a></li>
+                <li><a href="#pelajaran">Pelajaran</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Selamat Datang di <span class="accent-text">ChemMaster</span></h1>
+                <p>Platform pembelajaran kimia interaktif yang dirancang khusus untuk siswa SMA Indonesia</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="document.getElementById('pelajaran').scrollIntoView({behavior: 'smooth'})">
+                        Mulai Belajar
+                    </button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('tentang').scrollIntoView({behavior: 'smooth'})">
+                        Pelajari Lebih Lanjut
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-molecule">
+                    <i class="fas fa-atom"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fitur Section -->
+    <section id="fitur" class="fitur">
+        <div class="container">
+            <h2>Mengapa Memilih ChemMaster?</h2>
+            <div class="fitur-grid">
+                <div class="fitur-card">
+                    <div class="fitur-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Materi Lengkap</h3>
+                    <p>Semua materi kimia SMA dari dasar hingga lanjutan, sesuai kurikulum terbaru</p>
+                </div>
+                <div class="fitur-card">
+                    <div class="fitur-icon">
+                        <i class="fas fa-flask-vial"></i>
+                    </div>
+                    <h3>Simulasi Interaktif</h3>
+                    <p>Eksperimen virtual yang aman dan interaktif untuk memahami konsep kimia</p>
+                </div>
+                <div class="fitur-card">
+                    <div class="fitur-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Pembelajaran</h3>
+                    <p>Video penjelasan dari para ahli kimia dengan subtitle bahasa Indonesia</p>
+                </div>
+                <div class="fitur-card">
+                    <div class="fitur-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Tracking Progres</h3>
+                    <p>Pantau perkembangan belajar Anda dengan dashboard analitik real-time</p>
+                </div>
+                <div class="fitur-card">
+                    <div class="fitur-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Komunitas Belajar</h3>
+                    <p>Terhubung dengan siswa lain, berbagi tips, dan belajar bersama</p>
+                </div>
+                <div class="fitur-card">
+                    <div class="fitur-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Sertifikasi</h3>
+                    <p>Dapatkan sertifikat setelah menyelesaikan setiap topik pembelajaran</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pelajaran Section -->
+    <section id="pelajaran" class="pelajaran">
+        <div class="container">
+            <h2>Pilih Topik Pelajaran</h2>
+            <div class="topik-grid">
+                <div class="topik-card" onclick="selectTopik(this, 'Struktur Atom')">
+                    <div class="topik-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3>Struktur Atom</h3>
+                    <p>Pelajari tentang proton, neutron, dan elektron</p>
+                    <span class="progress-badge">8 Pelajaran</span>
+                </div>
+                <div class="topik-card" onclick="selectTopik(this, 'Ikatan Kimia')">
+                    <div class="topik-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3>Ikatan Kimia</h3>
+                    <p>Pahami ikatan kovalen, ionik, dan logam</p>
+                    <span class="progress-badge">6 Pelajaran</span>
+                </div>
+                <div class="topik-card" onclick="selectTopik(this, 'Reaksi Kimia')">
+                    <div class="topik-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Reaksi Kimia</h3>
+                    <p>Kuasai jenis-jenis reaksi dan persamaan kimia</p>
+                    <span class="progress-badge">10 Pelajaran</span>
+                </div>
+                <div class="topik-card" onclick="selectTopik(this, 'Tabel Periodik')">
+                    <div class="topik-icon">
+                        <i class="fas fa-th"></i>
+                    </div>
+                    <h3>Tabel Periodik</h3>
+                    <p>Mengenal elemen dan pengelompokannya</p>
+                    <span class="progress-badge">7 Pelajaran</span>
+                </div>
+                <div class="topik-card" onclick="selectTopik(this, 'Termodinamika')">
+                    <div class="topik-icon">
+                        <i class="fas fa-thermometer-full"></i>
+                    </div>
+                    <h3>Termodinamika</h3>
+                    <p>Energi, kalor, dan entropi dalam reaksi</p>
+                    <span class="progress-badge">9 Pelajaran</span>
+                </div>
+                <div class="topik-card" onclick="selectTopik(this, 'Kimia Organik')">
+                    <div class="topik-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Kimia Organik</h3>
+                    <p>Mempelajari senyawa karbon dan struktur molekul</p>
+                    <span class="progress-badge">12 Pelajaran</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal untuk detail topik -->
+    <div id="topikModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDesc"></p>
+            <div id="modalContent"></div>
+            <button class="btn btn-primary" onclick="mulaiPelajaran()">Mulai Pelajaran</button>
+        </div>
+    </div>
+
+    <!-- Tentang Section -->
+    <section id="tentang" class="tentang">
+        <div class="container">
+            <h2>Tentang ChemMaster</h2>
+            <div class="tentang-content">
+                <div class="tentang-text">
+                    <h3>Visi Kami</h3>
+                    <p>ChemMaster adalah platform pembelajaran yang berdedikasi untuk membuat kimia menjadi mata pelajaran yang menyenangkan dan mudah dipahami bagi semua siswa SMA Indonesia. Kami percaya bahwa setiap siswa memiliki potensi untuk menguasai kimia dengan cara yang tepat.</p>
+                    <h3>Misi Kami</h3>
+                    <ul class="misi-list">
+                        <li><i class="fas fa-check"></i> Menyediakan materi berkualitas tinggi sesuai kurikulum nasional</li>
+                        <li><i class="fas fa-check"></i> Membuat belajar kimia menjadi interaktif dan menyenangkan</li>
+                        <li><i class="fas fa-check"></i> Membantu siswa mencapai prestasi terbaik mereka</li>
+                        <li><i class="fas fa-check"></i> Membangun komunitas belajar yang solid dan saling mendukung</li>
+                    </ul>
+                </div>
+                <div class="tentang-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">10,000+</div>
+                        <div class="stat-label">Siswa Aktif</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">Materi Pelajaran</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Kepuasan Pengguna</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Simulasi Virtual</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial">
+        <div class="container">
+            <h2>Apa Kata Siswa Kami?</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"ChemMaster benar-benar mengubah cara saya belajar kimia. Materinya mudah dipahami dan simulasinya sangat membantu!"</p>
+                    <div class="testimonial-author">
+                        <strong>Rina Susanti</strong>
+                        <span>SMA Negeri 1, Jakarta</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Saya dari SMA Surabaya, dan platform ini membantu saya lulus ujian nasional dengan nilai sempurna. Terima kasih ChemMaster!"</p>
+                    <div class="testimonial-author">
+                        <strong>Budi Hartono</strong>
+                        <span>SMA Negeri 2, Surabaya</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Interface-nya user-friendly dan warna-warnanya nyaman untuk mata. Belajar kimia jadi lebih menyenangkan!"</p>
+                    <div class="testimonial-author">
+                        <strong>Siti Nurhaliza</strong>
+                        <span>SMA Negeri 3, Bandung</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section">
+        <div class="container">
+            <h2>Uji Pemahaman Anda</h2>
+            <div class="quiz-card">
+                <h3>Kuis Cepat: Struktur Atom</h3>
+                <div class="quiz-question">
+                    <p><strong>Pertanyaan 1 dari 3:</strong> Berapa jumlah proton dalam atom karbon?</p>
+                    <div class="quiz-options">
+                        <label class="option">
+                            <input type="radio" name="quiz1" value="a"> A) 4 proton
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="quiz1" value="b"> B) 6 proton
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="quiz1" value="c"> C) 8 proton
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="quiz1" value="d"> D) 12 proton
+                        </label>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="checkAnswer()">Periksa Jawaban</button>
+                <div id="quizResult"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="kontak">
+        <div class="container">
+            <h2>Hubungi Kami</h2>
+            <div class="kontak-grid">
+                <div class="kontak-info">
+                    <div class="kontak-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>info@chemmaster.id</p>
+                    </div>
+                    <div class="kontak-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Telepon</h3>
+                        <p>+62 812-3456-7890</p>
+                    </div>
+                    <div class="kontak-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Lokasi</h3>
+                        <p>Jakarta Selatan, Indonesia</p>
+                    </div>
+                </div>
+                <form class="kontak-form" onsubmit="handleSubmit(event)">
+                    <input type="text" placeholder="Nama Anda" required>
+                    <input type="email" placeholder="Email Anda" required>
+                    <textarea placeholder="Pesan Anda" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>ChemMaster</h4>
+                    <p>Platform pembelajaran kimia terpercaya untuk siswa SMA Indonesia</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Pelajaran</h4>
+                    <ul>
+                        <li><a href="#">Struktur Atom</a></li>
+                        <li><a href="#">Ikatan Kimia</a></li>
+                        <li><a href="#">Reaksi Kimia</a></li>
+                        <li><a href="#">Kimia Organik</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Perusahaan</h4>
+                    <ul>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Kontak</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ChemMaster. Semua hak dilindungi. Dibuat untuk siswa SMA Indonesia dengan <i class="fas fa-heart"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
