@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimia - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <meta name="theme-color" content="#1e3c72">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-flask"></i>
+                <span>KimiaKu</span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="materi.html">Materi</a></li>
+                <li><a href="monitoring.html">Monitoring</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Selamat Datang di <span class="accent-text">KimiaKu</span></h1>
+                <p>Ringkasan singkat dan materi untuk Semester 1 & 2. Pilih materi atau buka halaman monitoring untuk mencatat data pH, suhu, dan warna.</p>
+                <div class="hero-buttons">
+                    <a class="btn btn-primary" href="materi.html">Semester 1</a>
+                    <a class="btn btn-secondary" href="materi.html">Semester 2</a>
+                    <a class="btn btn-secondary" href="monitoring.html">Monitoring</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-molecule">
+                    <i class="fas fa-atom"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container page">
+        <section class="cards">
+            <article class="card">
+                <h3>Semester 1</h3>
+                <p>Stoikiometri, Ikatan kimia, Termokimia, Laju reaksi, Kesetimbangan.</p>
+                <a class="btn" href="materi.html">Lihat Materi</a>
+            </article>
+
+            <article class="card">
+                <h3>Semester 2</h3>
+                <p>Asam basa, Hidrolisis, Buffer, Titrasi, Kelarutan, Koloid.</p>
+                <a class="btn" href="materi.html">Lihat Materi</a>
+            </article>
+
+            <article class="card">
+                <h3>Monitoring & Olah Data</h3>
+                <p>Catat dan visualisasikan data pH, suhu, dan warna. Cocok untuk praktikum sederhana.</p>
+                <a class="btn" href="monitoring.html">Buka Monitoring</a>
+            </article>
+        </section>
+
+        <section class="home-highlights">
+            <header class="section-header">
+                <h3>Mengapa Belajar Kimia?</h3>
+                <p>Kimia membantu kamu memahami dunia dari level partikel sampai aplikasi nyata.</p>
+            </header>
+
+            <div class="highlight-grid">
+                <article class="highlight">
+                    <h4>Konsep inti</h4>
+                    <p>Mulai dari mol, ikatan, energi reaksi, sampai kesetimbangan dan asam-basa.</p>
+                </article>
+                <article class="highlight">
+                    <h4>Aplikasi sehari-hari</h4>
+                    <p>Obat, makanan, pembersih, baterai, air minum, dan lingkungan.</p>
+                </article>
+                <article class="highlight">
+                    <h4>Latihan data praktikum</h4>
+                    <p>Masukkan pH, suhu, warna, lalu simpan & ekspor untuk laporan.</p>
+                </article>
+            </div>
+
+            <div class="section-actions">
+                <a class="btn btn-primary" href="materi.html">Mulai Belajar</a>
+                <a class="btn" href="monitoring.html">Mulai Monitoring</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">&copy; 2026 desiandriawati v1.0</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
